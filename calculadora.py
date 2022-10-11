@@ -1,10 +1,8 @@
-from multiplicacion import multiplicacion
-from division import division
-from resta import resta
-from suma import suma
-from menu import menu
+from operaciones import suma, resta, multiplicacion, division
+from menus.menu import menu
 from sys import argv
 import os
+
 
 def calculadora(a, b):
     while True:
@@ -12,13 +10,13 @@ def calculadora(a, b):
 
         os.system("cls")
         if op == "1":
-            print(f"{a} + {b} = {suma(a, b)}")
+            print(f"{a} + {b} = {suma.suma(a, b)}")
         elif op == "2":
-            print(f"{a} - {b} = {resta(a, b)}")
+            print(f"{a} - {b} = {resta.resta(a, b)}")
         elif op == "3":
-            print(f"{a} * {b} = {multiplicacion(a, b)}")
+            print(f"{a} * {b} = {multiplicacion.multiplicacion(a, b)}")
         elif op == "4":
-            print(f"{a} / {b} = {division(a, b)}")
+            print(f"{a} / {b} = {division.division(a, b)}")
         elif op == "5":
             break
         else:
